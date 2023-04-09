@@ -38,13 +38,20 @@ echo '    Installing Stable Diffusion WebUI OpenPose editor extension'
 git clone https://github.com/fkunn1326/openpose-editor /content/stable-diffusion-webui/extensions/openpose-editor $QUIET
 echo '    Installing Stable Diffusion WebUI Image Browser extension'	
 git clone https://github.com/yfszzx/stable-diffusion-webui-images-browser /content/stable-diffusion-webui/extensions/stable-diffusion-webui-images-browser $QUIET
+echo '    Installing Stable Diffusion WebUI LoCon extension'
+git clone https://github.com/KohakuBlueleaf/a1111-sd-webui-locon /content/stable-diffusion-webui/extensions/a1111-sd-webui-locon $QUIET
+echo '    Installing Stable Diffusion WebUI LoRA block weight extension'
+git clone https://github.com/hako-mikan/sd-webui-lora-block-weight /content/stable-diffusion-webui/extensions/sd-webui-lora-block-weight $QUIET
+echo '    Installing Stable Diffusion WebUI HighRes Fix'
+git clone https://github.com/Kahsolt/stable-diffusion-webui-hires-fix-progressive /content/stable-diffusion-webui/extensions/stable-diffusion-webui-hires-fix-progressive $QUIET
 
 ## Stable Diffusion Models
-echo '    Installing Stable Diffusion Models'	
+echo '    Installing Stable Diffusion Models'
+echo "        Models: $SD_MODELS"
 curl -Lo /content/stable-diffusion-webui/models/Stable-diffusion/chilloutmixni.safetensors https://huggingface.co/nolanaatama/chomni/resolve/main/chomni.safetensors
-curl -Lo /content/stable-diffusion-webui/models/Stable-diffusion/urpm13.ckpt https://huggingface.co/nolanaatama/urpm13/resolve/main/urpm13.ckpt
-curl -Lo /content/stable-diffusion-webui/models/Stable-diffusion/f222.safetensors https://huggingface.co/m4gnett/zeipher-f222/resolve/main/f222.safetensors
-curl -Lo /content/stable-diffusion-webui/models/Stable-diffusion/level4.safetensors https://huggingface.co/holaholax/level4_v50BakedVAEFp16/resolve/main/level4_v50BakedVAEFp16.safetensors
+#curl -Lo /content/stable-diffusion-webui/models/Stable-diffusion/urpm13.ckpt https://huggingface.co/nolanaatama/urpm13/resolve/main/urpm13.ckpt
+#curl -Lo /content/stable-diffusion-webui/models/Stable-diffusion/f222.safetensors https://huggingface.co/m4gnett/zeipher-f222/resolve/main/f222.safetensors
+#curl -Lo /content/stable-diffusion-webui/models/Stable-diffusion/level4.safetensors https://huggingface.co/holaholax/level4_v50BakedVAEFp16/resolve/main/level4_v50BakedVAEFp16.safetensors
 
 ## ControlNet Models
 echo '    Installing ControlNet Models'	

@@ -10,7 +10,7 @@ cd /content
 
 # pyTorch
 echo -e "${INFO_COLOR}Installing pyTorch and deps${NO_COLOR}"
-pip clean-fid numba numpy jedi torch==2.0.0+cu118 torchvision --force-reinstall --extra-index-url https://download.pytorch.org/whl/cu118 $QUIET
+pip install clean-fid numba numpy jedi torch==2.0.0+cu118 torchvision --force-reinstall --extra-index-url https://download.pytorch.org/whl/cu118 $QUIET
 
 # Stable Diffusion WebUI
 echo -e "${INFO_COLOR}Installing Stable Diffusion WebUI${NO_COLOR}"

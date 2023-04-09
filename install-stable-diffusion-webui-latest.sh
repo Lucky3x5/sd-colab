@@ -9,12 +9,12 @@ NO_COLOR='\033[0m'
 cd /content
 
 # Memory allocator
-#echo -e "${INFO_COLOR}Installing libtcmalloc${NO_COLOR}"
-apt install libtcmalloc
+echo -e "${INFO_COLOR}Installing Google Performance Tools/TCMalloc${NO_COLOR}"
+apt install libgoogle-perftools4 google-perftools libtcmalloc-minimal4
 
 # pyTorch
-#echo -e "${INFO_COLOR}Installing pyTorch and deps${NO_COLOR}"
-#pip install torch==1.13.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116 -U $QUIET
+echo -e "${INFO_COLOR}Installing pyTorch and deps${NO_COLOR}"
+pip install clean-fid numba numpy torch==2.0.0+cu118 torchvision --force-reinstall --extra-index-url https://download.pytorch.org/whl/cu118 $QUIET
 
 # Stable Diffusion WebUI
 echo -e "${INFO_COLOR}Installing Stable Diffusion WebUI${NO_COLOR}"

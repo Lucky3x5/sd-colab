@@ -45,18 +45,18 @@ echo -e "${INFO_COLOR}    Installing Stable Diffusion WebUI LoCon extension${NO_
 git clone https://github.com/KohakuBlueleaf/a1111-sd-webui-locon /content/stable-diffusion-webui/extensions/a1111-sd-webui-locon $QUIET
 echo -e "${INFO_COLOR}    Installing Stable Diffusion WebUI LoRA block weight extension${NO_COLOR}"
 git clone https://github.com/hako-mikan/sd-webui-lora-block-weight /content/stable-diffusion-webui/extensions/sd-webui-lora-block-weight $QUIET
-echo -e "${INFO_COLOR}    Installing Stable Diffusion WebUI HighRes Fix${NO_COLOR}"
+echo -e "${INFO_COLOR}    Installing Stable Diffusion WebUI HighRes Fix extension${NO_COLOR}"
 git clone https://github.com/Kahsolt/stable-diffusion-webui-hires-fix-progressive /content/stable-diffusion-webui/extensions/stable-diffusion-webui-hires-fix-progressive $QUIET
 
 ## Stable Diffusion Models
 echo -e "${INFO_COLOR}    Installing Stable Diffusion Models${NO_COLOR}"
-echo -e "${INFO_COLOR}        Models: $SD_MODELS"
+echo -e "${INFO_COLOR}        Models: $SD_MODELS${NO_COLOR}"
 read -ra newarr <<< "$SD_MODELS"
 for model_url in "${newarr[@]}";
 do
     model_name=$(basename "$model_url")
-    echo -e "            $model_name"
-    curl -Lo /content/stable-diffusion-webui/models/$model_name $model_url
+    echo -e "${INFO_COLOR}            $model_name${NO_COLOR}"
+    curl -Lo "/content/stable-diffusion-webui/models/$model_name" "$model_url"
 done
 
 ## ControlNet Models

@@ -6,6 +6,12 @@ NO_COLOR='\033[0m'
 #alias curl='curl -S -s'
 #QUIET=' --quiet'
 
+cd /content
+
+# Memory allocator
+#echo -e "${INFO_COLOR}Installing libtcmalloc${NO_COLOR}"
+apt install libtcmalloc
+
 # pyTorch
 #echo -e "${INFO_COLOR}Installing pyTorch and deps${NO_COLOR}"
 #pip install torch==1.13.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116 -U $QUIET
